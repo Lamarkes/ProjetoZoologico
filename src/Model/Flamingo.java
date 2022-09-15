@@ -59,4 +59,12 @@ public class Flamingo extends Animal{
     public double getPeso() {
         return super.getPeso();
     }
+
+    @Override
+    public String toString() {
+        return "Flamingo{" +
+                "temBico=" + temBico +
+                ", cor='" + cor + '\'' +
+                '}';
+    }
 }

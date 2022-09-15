@@ -58,4 +58,11 @@ public class AraraAzul extends Animal{
         return super.getPeso();
     }
 
+    @Override
+    public String toString() {
+        return "AraraAzul{" +
+                "cor='" + cor + '\'' +
+                ", ehFilhote=" + ehFilhote +
+                '}';
+    }
 }

@@ -63,5 +63,13 @@ public class Leao extends Animal{
     public double getPeso(){
         return super.getPeso();
     }
+
+    @Override
+    public String toString() {
+        return "Leao{" +
+                "cor='" + cor + '\'' +
+                ", quantidadeDePatas=" + quantidadeDePatas +
+                '}';
+    }
 }
 

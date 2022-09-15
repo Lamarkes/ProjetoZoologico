@@ -59,4 +59,12 @@ public class Orca extends Animal{
     public double getPeso() {
         return super.getPeso();
     }
+
+    @Override
+    public String toString() {
+        return "Orca{" +
+                "quantasBarbatanas=" + quantasBarbatanas +
+                ", ehAdestrada=" + ehAdestrada +
+                '}';
+    }
 }

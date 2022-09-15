@@ -53,4 +53,12 @@ public class Papagaio extends Animal{
     public double getPeso() {
         return super.getPeso();
     }
+
+    @Override
+    public String toString() {
+        return "Papagaio{" +
+                "temAsas=" + temAsas +
+                ", falaMuito=" + falaMuito +
+                '}';
+    }
 }

@@ -66,6 +66,14 @@ public class Sardinha extends Animal{
     public String getReino(){
         return super.getReino();
     }
+
+    @Override
+    public String toString() {
+        return "Sardinha{" +
+                "cor='" + cor + '\'' +
+                ", quantasBarbatanas=" + quantasBarbatanas +
+                '}';
+    }
 }
 
 
