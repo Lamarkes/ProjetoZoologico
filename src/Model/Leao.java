@@ -69,6 +69,13 @@ public class Leao extends Animal{
         return "Leao{" +
                 "cor='" + cor + '\'' +
                 ", quantidadeDePatas=" + quantidadeDePatas +
+                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
+                ", idadeAnimal=" + idadeAnimal +
+                ", raca='" + raca + '\'' +
+                ", reino='" + reino + '\'' +
+                ", peso=" + peso +
+                ", castrado=" + castrado +
+                ", alimentacao='" + alimentacao + '\'' +
                 '}';
     }
 }

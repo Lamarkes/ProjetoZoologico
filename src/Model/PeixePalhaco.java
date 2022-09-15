@@ -51,6 +51,13 @@ public class PeixePalhaco extends Animal {
     public String toString() {
         return "PeixePalhaco{" +
                 "cor='" + cor + '\'' +
+                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
+                ", idadeAnimal=" + idadeAnimal +
+                ", raca='" + raca + '\'' +
+                ", reino='" + reino + '\'' +
+                ", peso=" + peso +
+                ", castrado=" + castrado +
+                ", alimentacao='" + alimentacao + '\'' +
                 '}';
     }
 }

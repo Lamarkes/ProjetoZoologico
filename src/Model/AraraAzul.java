@@ -63,6 +63,13 @@ public class AraraAzul extends Animal{
         return "AraraAzul{" +
                 "cor='" + cor + '\'' +
                 ", ehFilhote=" + ehFilhote +
+                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
+                ", idadeAnimal=" + idadeAnimal +
+                ", raca='" + raca + '\'' +
+                ", reino='" + reino + '\'' +
+                ", peso=" + peso +
+                ", castrado=" + castrado +
+                ", alimentacao='" + alimentacao + '\'' +
                 '}';
     }
 }

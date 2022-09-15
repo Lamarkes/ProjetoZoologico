@@ -65,6 +65,13 @@ public class Flamingo extends Animal{
         return "Flamingo{" +
                 "temBico=" + temBico +
                 ", cor='" + cor + '\'' +
+                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
+                ", idadeAnimal=" + idadeAnimal +
+                ", raca='" + raca + '\'' +
+                ", reino='" + reino + '\'' +
+                ", peso=" + peso +
+                ", castrado=" + castrado +
+                ", alimentacao='" + alimentacao + '\'' +
                 '}';
     }
 }

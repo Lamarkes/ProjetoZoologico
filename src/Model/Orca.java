@@ -63,8 +63,15 @@ public class Orca extends Animal{
     @Override
     public String toString() {
         return "Orca{" +
-                "quantasBarbatanas=" + quantasBarbatanas +
-                ", ehAdestrada=" + ehAdestrada +
+                "ehAdestrada=" + ehAdestrada +
+                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
+                "quantidadeDeBarbatanas='" + quantasBarbatanas +'\''+
+                ", idadeAnimal=" + idadeAnimal +
+                ", raca='" + raca + '\'' +
+                ", reino='" + reino + '\'' +
+                ", peso=" + peso +
+                ", castrado=" + castrado +
+                ", alimentacao='" + alimentacao + '\'' +
                 '}';
     }
 }

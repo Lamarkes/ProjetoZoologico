@@ -72,6 +72,13 @@ public class Sardinha extends Animal{
         return "Sardinha{" +
                 "cor='" + cor + '\'' +
                 ", quantasBarbatanas=" + quantasBarbatanas +
+                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
+                ", idadeAnimal=" + idadeAnimal +
+                ", raca='" + raca + '\'' +
+                ", reino='" + reino + '\'' +
+                ", peso=" + peso +
+                ", castrado=" + castrado +
+                ", alimentacao='" + alimentacao + '\'' +
                 '}';
     }
 }

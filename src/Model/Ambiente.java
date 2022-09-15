@@ -48,7 +48,7 @@ public class Ambiente {
         this.getAmbienteTerrestre();
         this.getAmbienteAereo();
         this.getAmbienteAquatico();
-        return "Lista";
+        return "";
     }
 
 

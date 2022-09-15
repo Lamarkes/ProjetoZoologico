@@ -59,6 +59,13 @@ public class Papagaio extends Animal{
         return "Papagaio{" +
                 "temAsas=" + temAsas +
                 ", falaMuito=" + falaMuito +
+                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
+                ", idadeAnimal=" + idadeAnimal +
+                ", raca='" + raca + '\'' +
+                ", reino='" + reino + '\'' +
+                ", peso=" + peso +
+                ", castrado=" + castrado +
+                ", alimentacao='" + alimentacao + '\'' +
                 '}';
     }
 }
