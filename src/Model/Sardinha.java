@@ -1,85 +1,74 @@
 package Model;
 
-public class Sardinha extends Animal{
+import Interface.INadar;
+
+public class Sardinha extends Aquatico implements INadar {
 
     String cor;
-    int quantasBarbatanas;
+    int quantidadeDeBranquias;
 
-    public Sardinha(String nomeDoAnimal,
-                    int idadeAnimal,
-                    String racaAnimal,
-                    String reino,
-                    double pesoAnimal,
-                    boolean castrado,
+    public Sardinha(String nome,
+                    int quantidadeDeBarbatanas,
+                    boolean comeOutrosPeixes,
+                    String alimentacao,
                     String cor,
-                    int quantasBarbatanas,
-                    String alimentacao)
-    {
-        super(nomeDoAnimal,
-                idadeAnimal,
-                racaAnimal,
-                reino,
-                pesoAnimal,
-                castrado,
-                alimentacao);
+                    int quantidadeDeBranquias) {
+        super(nome, quantidadeDeBarbatanas, comeOutrosPeixes, alimentacao);
         this.cor = cor;
-        this.quantasBarbatanas = quantasBarbatanas;
+        this.quantidadeDeBranquias = quantidadeDeBranquias;
     }
 
-    public void setCor(String cor){
-        this.cor = cor;
-    }
-    public String cor(){
+    public String getCor() {
         return cor;
     }
-    public void setQuantasBarbatanas(int quantasBarbatanas){
-        this.quantasBarbatanas = quantasBarbatanas;
+
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 
-    public int getQuantasBarbatanas(){
-        return quantasBarbatanas;
+    public int getQuantidadeDeBranquias() {
+        return quantidadeDeBranquias;
     }
 
-    @Override
-    public void setNomeDoAnimal(String nomeDoAnimal) {
-        super.setNomeDoAnimal(nomeDoAnimal);
-    }
-
-    @Override
-    public String getNomeDoAnimal() {
-        return super.getNomeDoAnimal();
+    public void setQuantidadeDeBranquias(int quantidadeDeBranquias) {
+        this.quantidadeDeBranquias = quantidadeDeBranquias;
     }
 
     @Override
-    public void setIdadeAnimal(int idadeAnimal) {
-        super.setIdadeAnimal(idadeAnimal);
+    public int getQuantidadeDeBarbatanas() {
+        return super.getQuantidadeDeBarbatanas();
     }
+
     @Override
-    public int getIdadeAnimal() {
-        return super.getIdadeAnimal();
+    public String getNome() {
+        return super.getNome();
     }
+
     @Override
-    public String getRaca(){
-        return super.getRaca();
+    public boolean isComeOutrosPeixes() {
+        return super.isComeOutrosPeixes();
     }
+
     @Override
-    public String getReino(){
-        return super.getReino();
+    public String getAlimentacao() {
+        return super.getAlimentacao();
     }
 
     @Override
     public String toString() {
         return "Sardinha{" +
                 "cor='" + cor + '\'' +
-                ", quantasBarbatanas=" + quantasBarbatanas +
-                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
-                ", idadeAnimal=" + idadeAnimal +
-                ", raca='" + raca + '\'' +
-                ", reino='" + reino + '\'' +
-                ", peso=" + peso +
-                ", castrado=" + castrado +
+                ", quantidadeDeBranquias=" + quantidadeDeBranquias +
+                ", quantidadeDeBarbatanas=" + quantidadeDeBarbatanas +
+                ", nome='" + nome + '\'' +
+                ", comeOutrosPeixes=" + comeOutrosPeixes +
                 ", alimentacao='" + alimentacao + '\'' +
                 '}';
+    }
+
+    @Override
+    public void Nadar() {
+        System.out.println("O peixe nadou bem rapido!");
     }
 }
 

@@ -1,22 +1,22 @@
 package Model;
 
-public class Flamingo extends Animal{
+import Interface.IBicar;
+import Interface.IBotarOvos;
+
+public class Flamingo extends Ave implements IBotarOvos, IBicar {
     boolean temBico;
     String cor;
 
-    public Flamingo(
-            String nomeDoAnimal,
-            int idadeAnimal,
-            String racaAnimal,
-            String reino,
-            double pesoAnimal,
-            boolean castrado,
-            String alimentacao,
-            boolean temBico,
-            String cor) {
-        super(nomeDoAnimal, idadeAnimal, racaAnimal, reino, pesoAnimal, castrado, alimentacao);
-        this.cor = cor;
+
+    public Flamingo(boolean temBico,
+                    String nome,
+                    String cor,
+                    int quantidadeDeAsas,
+                    boolean podeVoar,
+                    boolean temPenas) {
+        super(nome, quantidadeDeAsas, podeVoar, temPenas);
         this.temBico = temBico;
+        this.cor = cor;
     }
 
     public boolean isTemBico() {
@@ -36,28 +36,13 @@ public class Flamingo extends Animal{
     }
 
     @Override
-    public String getNomeDoAnimal() {
-        return super.getNomeDoAnimal();
+    public int getQuantidadeDeAsas() {
+        return super.getQuantidadeDeAsas();
     }
 
     @Override
-    public int getIdadeAnimal() {
-        return super.getIdadeAnimal();
-    }
-
-    @Override
-    public String getRaca() {
-        return super.getRaca();
-    }
-
-    @Override
-    public String getReino() {
-        return super.getReino();
-    }
-
-    @Override
-    public double getPeso() {
-        return super.getPeso();
+    public String getNome() {
+        return super.getNome();
     }
 
     @Override
@@ -65,13 +50,20 @@ public class Flamingo extends Animal{
         return "Flamingo{" +
                 "temBico=" + temBico +
                 ", cor='" + cor + '\'' +
-                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
-                ", idadeAnimal=" + idadeAnimal +
-                ", raca='" + raca + '\'' +
-                ", reino='" + reino + '\'' +
-                ", peso=" + peso +
-                ", castrado=" + castrado +
-                ", alimentacao='" + alimentacao + '\'' +
+                ", nome='" + nome + '\'' +
+                ", quantidadeDeAsas=" + quantidadeDeAsas +
+                ", podeVoar=" + podeVoar +
+                ", temPenas=" + temPenas +
                 '}';
+    }
+
+    @Override
+    public void Bicar() {
+        System.out.println("A ave bicou!");
+    }
+
+    @Override
+    public void BotarOvos() {
+        System.out.println("A ave colocou ovos!");
     }
 }

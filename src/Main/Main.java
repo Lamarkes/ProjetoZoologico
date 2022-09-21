@@ -45,72 +45,55 @@ public class Main {
         );
 
         Papagaio papagaio1 = new Papagaio(
-                "Lula",
-                4,
-                "Papagaio-Verdadeiro",
-                "Animal",
-                105,
+                "Zeus",
+                2,
                 true,
                 true,
-                false,
-                "Frutifero"
+                true,
+                true,
+                "sementes"
         );
 
-        AraraAzul araraAzul1 = new AraraAzul("Blue",
-                4,
-                "Arara-azul",
-                "Animal",
-                0.90,
-                false,
-                "sementes",
-                "Azul",
-                true
-                );
-        Flamingo flamingo1 = new Flamingo(
-                "Galinha",
-                6,
-                "Flamingo Viajante",
-                "Animal",
-                4,
-                false,
-                "Peixe e sementes",
+        AraraAzul araraAzul1 = new AraraAzul(
+                "blue",
+                2,
                 true,
-                "Rosa"
+                true,
+                "azul",
+                false
+        );
+        Flamingo flamingo1 = new Flamingo(
+                true,
+                "Galinha",
+                "rosa",
+                2,
+                true,
+                true
         );
 
         Sardinha sardinha1 = new Sardinha(
-                "Sardinha",
-                4,
-                "Srdinha vermelha",
-                "Aquatico",
-                0.9,
-                true,
-                "amarela",
+                "Sardinha Bacana",
                 2,
-                "Algas"
+                false,
+                "Algas",
+                "Cinza",
+                3
                 );
 
         PeixePalhaco peixePalhaco1 = new PeixePalhaco(
                 "Nemo",
-                7,
-                "Peixe-palhaco",
-                "Aquatico",
-                0.43,
+                2,
+                "vermelho-enferrujado",
                 false,
-                "algas",
-                "laranja"
+                "algas"
         );
 
         Orca orca1 = new Orca(
-                "Free Wiely",
-                8,
-                "Orca-Assassina",
-                "Animal",
-                198,
-                false,
-                "peixes",
-                3,
-                true
+                2,
+                "Free Weley",
+                true,
+                "carnivoro",
+                false
         );
 
 
@@ -118,13 +101,13 @@ public class Main {
         ambiente.setAmbienteTerrestre(1,leao2);
         ambiente.setAmbienteTerrestre(2,leao3);
 
-        ambiente.setAmbienteAereo(0,papagaio1);
-        ambiente.setAmbienteAereo(1,araraAzul1);
-        ambiente.setAmbienteAereo(2,flamingo1);
+        ambiente.setAves(0,papagaio1);
+        ambiente.setAves(1,araraAzul1);
+        ambiente.setAves(2,flamingo1);
 
-        ambiente.setAmbienteAquatico(0,sardinha1);
-        ambiente.setAmbienteAquatico(1, peixePalhaco1);
-        ambiente.setAmbienteAquatico(2,orca1);
+        ambiente.setAquatico(0,sardinha1);
+        ambiente.setAquatico(1, peixePalhaco1);
+        ambiente.setAquatico(2,orca1);
 
         Zoologico zoologicoRenezao = new Zoologico(
                 "Zoologico ReneZao",
@@ -134,5 +117,15 @@ public class Main {
 
         System.out.println(zoologicoRenezao.getAmbiente());
 
+        // metodos:
+        papagaio1.Bicar();
+        flamingo1.BotarOvos();
+
+        orca1.ComerPeixes();
+        orca1.Nadar();
+
+        sardinha1.Nadar();
+
+        peixePalhaco1.Nadar();
     }
 }

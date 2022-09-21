@@ -1,19 +1,14 @@
 package Model;
 
-public class AraraAzul extends Animal{
+import Interface.IBicar;
+import Interface.IBotarOvos;
+
+public class AraraAzul extends Ave implements IBicar, IBotarOvos {
     String cor;
     boolean ehFilhote;
 
-    public AraraAzul(String nomeDoAnimal,
-                     int idadeAnimal,
-                     String racaAnimal,
-                     String reino,
-                     double pesoAnimal,
-                     boolean castrado,
-                     String alimentacao,
-                     String cor,
-                     boolean ehFilhote) {
-        super(nomeDoAnimal, idadeAnimal, racaAnimal, reino, pesoAnimal, castrado, alimentacao);
+    public AraraAzul(String nome,int quantidadeDeAsas, boolean podeVoar, boolean temPenas, String cor, boolean ehFilhote) {
+        super(nome,quantidadeDeAsas, podeVoar, temPenas);
         this.cor = cor;
         this.ehFilhote = ehFilhote;
     }
@@ -35,41 +30,35 @@ public class AraraAzul extends Animal{
     }
 
     @Override
-    public String getNomeDoAnimal() {
-        return super.getNomeDoAnimal();
-    }
-    @Override
-    public int getIdadeAnimal() {
-        return super.getIdadeAnimal();
+    public int getQuantidadeDeAsas() {
+        return super.getQuantidadeDeAsas();
     }
 
     @Override
-    public String getRaca() {
-        return super.getRaca();
-    }
-
-    @Override
-    public String getReino() {
-        return super.getReino();
-    }
-
-    @Override
-    public double getPeso() {
-        return super.getPeso();
+    public String getNome() {
+        return super.getNome();
     }
 
     @Override
     public String toString() {
         return "AraraAzul{" +
                 "cor='" + cor + '\'' +
+                ", nome='" + nome + '\'' +
                 ", ehFilhote=" + ehFilhote +
-                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
-                ", idadeAnimal=" + idadeAnimal +
-                ", raca='" + raca + '\'' +
-                ", reino='" + reino + '\'' +
-                ", peso=" + peso +
-                ", castrado=" + castrado +
-                ", alimentacao='" + alimentacao + '\'' +
+                ", quantidadeDeAsas=" + quantidadeDeAsas +
+                ", podeVoar=" + podeVoar +
+                ", temPenas=" + temPenas +
                 '}';
     }
+
+    @Override
+    public void Bicar() {
+        System.out.println("A ave bicou!");
+    }
+
+    @Override
+    public void BotarOvos() {
+        System.out.println("A ave botou ovos!!");
+    }
 }
+

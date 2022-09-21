@@ -8,7 +8,7 @@ public class Animal {
     public String raca;
     public String reino;
     public double peso;
-    public boolean castrado = false;
+    public boolean castrado;
 
     public String alimentacao;
 

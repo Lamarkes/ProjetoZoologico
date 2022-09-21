@@ -1,19 +1,18 @@
 package Model;
 
-public class PeixePalhaco extends Animal {
+import Interface.INadar;
+
+public class PeixePalhaco extends Aquatico implements INadar {
 
 
     String cor;
 
-    public PeixePalhaco(String nomeDoAnimal,
-                        int idadeAnimal,
-                        String racaAnimal,
-                        String reino,
-                        double pesoAnimal,
-                        boolean castrado,
-                        String alimentacao,
-                        String cor) {
-        super(nomeDoAnimal, idadeAnimal, racaAnimal, reino, pesoAnimal, castrado, alimentacao);
+    public PeixePalhaco(String nome,
+                        int quantidadeDeBarbatanas,
+                        String cor,
+                        boolean comeOutrosPeixes,
+                        String alimentacao) {
+        super(nome, quantidadeDeBarbatanas, comeOutrosPeixes, alimentacao);
         this.cor = cor;
     }
 
@@ -24,40 +23,40 @@ public class PeixePalhaco extends Animal {
     public void setCor(String cor) {
         this.cor = cor;
     }
+
     @Override
-    public String getNomeDoAnimal() {
-        return super.getNomeDoAnimal();
+    public int getQuantidadeDeBarbatanas() {
+        return super.getQuantidadeDeBarbatanas();
     }
 
     @Override
-    public int getIdadeAnimal() {
-        return super.getIdadeAnimal();
-    }
-    @Override
-    public String getRaca(){
-        return super.getRaca();
-    }
-    @Override
-    public String getReino(){
-        return super.getReino();
+    public String getNome() {
+        return super.getNome();
     }
 
     @Override
-    public double getPeso() {
-        return super.getPeso();
+    public boolean isComeOutrosPeixes() {
+        return super.isComeOutrosPeixes();
+    }
+
+    @Override
+    public String getAlimentacao() {
+        return super.getAlimentacao();
     }
 
     @Override
     public String toString() {
         return "PeixePalhaco{" +
                 "cor='" + cor + '\'' +
-                ", nomeDoAnimal='" + nomeDoAnimal + '\'' +
-                ", idadeAnimal=" + idadeAnimal +
-                ", raca='" + raca + '\'' +
-                ", reino='" + reino + '\'' +
-                ", peso=" + peso +
-                ", castrado=" + castrado +
+                ", quantidadeDeBarbatanas=" + quantidadeDeBarbatanas +
+                ", nome='" + nome + '\'' +
+                ", comeOutrosPeixes=" + comeOutrosPeixes +
                 ", alimentacao='" + alimentacao + '\'' +
                 '}';
+    }
+
+    @Override
+    public void Nadar() {
+        System.out.println("O peixe nadou bem rapido!");
     }
 }
